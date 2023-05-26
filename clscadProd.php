@@ -9,6 +9,9 @@ class cadProd{
     private $valor;
     private $validade;
     private $ordem;
+    private $dataVal1;
+    private $dataVal2;
+
     //---------------------------------------------
     
     public function getcodProd(){
@@ -50,7 +53,23 @@ class cadProd{
         $this->ordem = $or;
     }
     //---------------------------------------------
+
+    public function getdataVal1(){
+        return $this->dataVal1;
+    }
+    public function setdataVal1($dtv1){
+        $this->dataVal1 = $dtv1;
+    }
+    //------------------------------------------------------------------
+
+    public function getdataVal2(){
+        return $this->dataVal2;
+    }
+    public function setdataVal2($dtv2){
+        $this->dataVal2 = $dtv2;
+    }
     
+    //---------------------------------------------------------------------------
     //metodo cadastrar produtos
     public function inserir()
     {
@@ -138,6 +157,22 @@ class cadProd{
         }
 
         return $retorno;
+    }
+
+    //----------------------------------------------------------------------------------
+
+    public function validade()
+    {
+        include_once "conexao.php";
+
+        try 
+        {
+            
+        } 
+        catch (\Throwable $th) 
+        {
+            
+        }
     }
 }
 

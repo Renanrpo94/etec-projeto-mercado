@@ -67,7 +67,8 @@
                         <label for="dataVal2">Data final</label><br>
                         <input type="date" name="dataVal2" id="dataVal2" ><br><br>
 
-                        <input type="submit" value="Listar" name="listarVal" id="listar" class="btn btn-success">
+                        <input type="submit" value="Listar" name="listarVal" id="listarVal" class="btn btn-success">
+                        <input type="reset"  value="Limpar"  name="limpar"  id="limpar" class='btn btn-secondary'>
                     </form>
                 </div>
             </div>
