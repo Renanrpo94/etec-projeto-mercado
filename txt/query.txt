@@ -1,0 +1,27 @@
+create database mercado;
+
+use mercado;
+
+create table produto(
+	codProd int (6) not null,
+    descricao varchar (60) not null,
+    valor decimal (5,2) not null,
+    validade date not null
+);
+
+desc produto;
+show tables;
+
+select * from produto;
+
+create table movto(
+	codProd int (6) not null,
+    tipo varchar (1) not null,
+    qtde decimal (7,2) not null,
+    datamov date not null
+);
+
+select * from movto;
+
+select * from produto order by codProd;
+select codProd, descricao from produto order by codProd;

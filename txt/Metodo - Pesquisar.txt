@@ -1,0 +1,48 @@
+//Metodo - Pesquisar dados do Banco ------------
+    public function Consultar()
+    {
+        include_once "Conexao.php";
+        try 
+        {         
+            $Comando=$conexao->prepare("select Matricula,Nome from Alunos where Matricula = ?");
+            $Comando->bindParam(1,$this->Matricula);
+
+            $Comando->execute();
+            // array
+            $Retorno = $Comando->fetchAll(PDO::FETCH_ASSOC); 
+            // objeto
+            //$Retorno = $Comando->fetchAll(PDO::FETCH_OBJ);  
+        }
+        catch (PDOException $Erro) 
+        {
+            $Retorno = "Erro " . $Erro->getMessage();
+        }
+        return $Retorno;
+    }
+
+
+============
+else if (isset($_GET["Pesquisar"]))
+{
+    $Dados = $Cad->Consultar();
+  
+    if (empty($Dados))
+    {
+        echo "<script> alert('Matricula nao localizada') </script>";
+        echo "<script>document.location='index.php'</script>";
+    }
+    else
+    {
+        foreach($Dados as $Dd)
+        {
+            // array
+             echo "Matricula {$Dd['Matricula']}   <br>";
+             echo "Nome      {$Dd['Nome']}        <br>";        
+             echo "<hr> <br>";
+
+            // objeto
+            //echo "Matricula {$Dd->Matricula}   <br>";
+            //echo "Nome      {$Dd->Nome}        <br>";        
+            //echo "<hr> <br>";
+        }
+    }

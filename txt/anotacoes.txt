@@ -1,0 +1,8 @@
+-listar de todos os produtos cadastrados em ordem alfabetica ou ordem de codigo  //index-cad
+FEITO                      FEITO
+___________________________________________________________________________________________________
+
+-listar produto por validade // index-estoque
+
+-listar movto entrada até // index-extoque
+
