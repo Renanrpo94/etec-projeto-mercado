@@ -48,17 +48,31 @@
       </nav>
     </header>
 
-        <h1 style="margin-top: 30px;">Consulta de produtos</h1><br><br>
-    
-        <form action="controle_listar_prod.php" method="get">
-            
-            <h4>Insira a data de validade</h4><br>
-            
-            <label for="dataVal">Data de validade</label><br>
-            <input type="date" name="dataVal" id="dataVal"><br><br>
+    <br>
 
-            <input type="submit" value="Listar" name="listarVal" id="listar">
-        </form>
-       
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5">
+                    
+                    <h1 style="margin-top: 30px;">Consulta de produtos</h1><hr><br>
+
+                    <form action="controlecad.php" method="get">
+                        
+                        <h2>Insira o periodo que deseja consultar</h2><br>
+                        
+                        <label for="dataVal1">Data de inicio</label><br>
+                        <input type="date" name="dataVal1" id="dataVal1" ><br>
+                        
+                        <label for="dataVal2">Data final</label><br>
+                        <input type="date" name="dataVal2" id="dataVal2" ><br><br>
+
+                        <input type="submit" value="Listar" name="listarVal" id="listar" class="btn btn-success">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>    
+
 </body>
 </html>

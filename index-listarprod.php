@@ -48,8 +48,9 @@
       </nav>
     </header>
 
-        <br><br>
-
+        <br>
+    
+    <main>
         <div class="container">
             <div class="row">
                 <div class="col mt-5">
@@ -68,6 +69,7 @@
                     </form>
                 </div>
             </div>
-        </div>        
+        </div>
+    </main>            
 </body>
 </html>

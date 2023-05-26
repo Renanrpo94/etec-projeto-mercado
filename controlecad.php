@@ -38,6 +38,8 @@
         </div>
       </nav>
     </header>
+
+    <br>
     
     <main>
         <div class="container">
@@ -57,6 +59,8 @@
                         $valor     = filter_input(INPUT_GET,'valor', FILTER_VALIDATE_FLOAT);
                         $validade  = filter_input(INPUT_GET,'validade');
                         $ordem     = filter_input(INPUT_GET,'ordem');
+                        $dataVal1  = filter_input(INPUT_GET,'dataVal1');
+                        $dataVal2  = filter_input(INPUT_GET,'dataVal2');
 
                         //envia os parametros (input-> variavel -> atributo da classe) para os atributos da classe
                         $cadastro->setcodProd($codProd);
