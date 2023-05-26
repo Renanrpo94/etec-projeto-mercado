@@ -32,10 +32,16 @@
                         <li><a class="dropdown-item" href="index-cad.php">Cadastrar / Exluir produtos</a></li>
                         <li><hr class="dropdown-divider"></li>
                         
-                        <li><a class="dropdown-item" href="index-listarprod.php">Consultar Estoque</a></li>
+                        <li><a class="dropdown-item" href="index-listarprod.php">Consultar lista de produtos cadastrados</a></li>
                         <li><hr class="dropdown-divider"></li>
                         
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="index-listar-val.php">Consultar data de vencimento</a></li>
+                        <li><hr class="dropdown-divider"></li>
+
+                        <li><a class="dropdown-item" href="index-estoque.php">Cadastrar Movimento de estoque</a></li>
+                        <li><hr class="dropdown-divider"></li>
+
+                        <li><a class="dropdown-item" href="">Listar tipo de movimento Entrada / Saida</a></li>
                 </ul>
           </div>
         </div>
