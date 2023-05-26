@@ -48,26 +48,33 @@
       </nav>
     </header>
 
-    <form action="controlemovto.php" method="get">
-        <label for="codProd">Codigo do produto</label>
-        <input type="number" name="codProd" id="codProd" min="1" max="9999999999" required><br>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col mt-5">
+                    <form action="controlemovto.php" method="get">
+                        <label for="codProd">Codigo do produto</label>
+                        <input type="number" name="codProd" id="codProd" min="1" max="9999999999" class="form-control"><br>
 
-        <label for="tipo">Tipo de Movimentação</label>
-        <select name="tipo" id="tipo" required>
-            <option value="e" checked>Entrada</option><br>
-            <option value="s">Saida</option>
-        </select><br>
-            
-        <label for="qtde">Quantidade</label>
-        <input type="number" name="qtde" id="qtde" step="0.01" max=99999 required><br>
+                        <label for="tipo">Tipo de Movimentação</label>
+                        <select name="tipo" id="tipo" class="form-control">
+                            <option value="e" checked>Entrada</option><br>
+                            <option value="s">Saida</option>
+                        </select><br>
+                            
+                        <label for="qtde">Quantidade</label>
+                        <input type="number" name="qtde" id="qtde" step="0.01" max=99999 class="form-control"><br>
 
-        <label for="datamov">Data de Movimentação</label>
-        <input type="date" name="datamov" id="datamov" required><br><br>
+                        <input type="submit" value="Incluir" name="incluir" id="incluir" class='btn btn-success'>
+                        <input type="submit" value="Exluir"  name="excluir"  id="excluir" class='btn btn-danger'>
+                        <input type="reset" value="Limpar" name="limpar" id="limpar" class='btn btn-secondary'>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main> 
 
-        <input type="submit" value="Incluir" name="incluir" id="incluir">
-        <input type="submit" value="Exluir"  name="excluir"  id="excluir">
-        <input type="reset" value="Limpar" name="limpar" id="limpar">
-    </form>
+    
        
 </body>
 </html>

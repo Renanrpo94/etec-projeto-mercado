@@ -55,7 +55,7 @@ class movto{
 
             if ($comando->execute())
             {
-               $retorno = "ESTOQUE ALTERADO: quantidade adicionada com sucesso";
+               $retorno = "<script>alert('movimento cadastrado com sucesso');</script><script>location.href='index-estoque.php';</script>";
             }   
         } catch (PDOException $erro){
             $retorno = 'Erro' . $erro->getMessage();
@@ -76,7 +76,7 @@ class movto{
 
             if ($comando->execute())
             {
-               $retorno = "ESTOQUE ALTERADO: quantidade subtraida com sucesso";
+               $retorno = "<script>alert('movimento excluido com sucesso');</script><script>location.href='index-estoque.php';</script>";
             }   
         } catch (PDOException $erro){
             $retorno = 'Erro' . $erro->getMessage();
