@@ -9,6 +9,16 @@ create table produto(
     validade date not null
 );
 
+insert into produto (codProd, descricao, valor, validade) values 
+(1, 'Pé de galinha kg', 6.23, '2023-06-10' ),
+(5, 'Bolacha Trakinas chocolate', 2.80, '2024-02-10'),
+(6, 'Bolacha Trakinas Morango', 2.80, '2024-05-05'),
+(10, 'coca-cola 350ml', 5.20, '2023-08-20'),
+(15, 'Arroz Camil 5kg', 20.99, '2023-12-13'),
+(20, 'Picanha Maturata 1kg', 72.33, '2023-06-10'),
+(30, 'Leite 1lt Jussara', 4,85, '2023-07-27'),
+(40, 'Nescau 400gr', 8.75, '2023-08-15');
+
 
 desc produto;
 show tables;
