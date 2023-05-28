@@ -138,13 +138,6 @@ class cadProd{
                 //$Comando->bindParam(1,$this->ordem);
             }
 
-
-
-           /* 
-            TESTE
-            $Comando=$conexao->prepare("select codProd, descricao from produto order by codProd");
-            $Comando->bindParam(1,$this->ordem);*/
-
             $Comando->execute();
             // array
             $retorno = $Comando->fetchAll(PDO::FETCH_ASSOC); 
@@ -166,13 +159,21 @@ class cadProd{
         include_once "conexao.php";
 
         try 
-        {
+        {         
+            $comando=$conexao->prepare("select * from produto where validade >= ? and validade < ? order by validade;");
             
+            $comando->bindParam(1,$this->dataVal1);
+            $comando->bindParam(2,$this->dataVal2);
+
+            $comando->execute();
+            $retorno = $comando->fetchAll(PDO::FETCH_ASSOC); 
         } 
-        catch (\Throwable $th) 
+        catch (PDOException $erro)
         {
-            
+            $retorno = 'Erro' . $erro->getMessage();
         }
+
+        return $retorno;
     }
 }
 

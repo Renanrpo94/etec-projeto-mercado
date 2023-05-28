@@ -125,18 +125,18 @@
                             }    
                         }
 
-                        /*if (isset($_GET["listarVal"]))
+                        if (isset($_GET["listarVal"]))
                         {
                             $Dados = $cadastro->validade();
 
                             if (empty($Dados))
                             {
                                 echo "<script> alert('Produtos nao localizadados') </script>";
-                                echo "<script>document.location='index-listarprod.php'</script>";
+                                echo "<script>document.location='index-listar-val.php'</script>";
                             }
                             else
                             {   
-                                print "<h2>Produtos cadastrados</h2><br><br>";
+                                print "<h2>Data de validade</h2><br><br>";
                                 print "<hr>";
                                 print "<br><br>";
 
@@ -144,23 +144,20 @@
                                     print "<tr>";
                                         print "<th>Código</th>";
                                         print "<th>Descrição</th>";
+                                        print "<th>Validade</th>";
                                     print "</tr>";
                                 foreach($Dados as $Dd)
                                 {
                                     // array
                                     print "<tr>"; 
                                         print "<td>{$Dd['codProd']} </td>";
-                                        print "<td>{$Dd['descricao']} </td>";        
+                                        print "<td>{$Dd['descricao']} </td>";
+                                        print "<td>{$Dd['validade']} </td>";           
                                     print "</tr>"; 
-                                    
-                                    // objeto
-                                    //echo "Matricula {$Dd->Matricula}   <br>";
-                                    //echo "Nome      {$Dd->Nome}        <br>";        
-                                    //echo "<hr> <br>";
                                 }
                                 print "</table>";  
                             }    
-                        }*/
+                        }
 
                     ?>
                 </div>

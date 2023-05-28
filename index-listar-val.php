@@ -55,7 +55,7 @@
             <div class="row">
                 <div class="col mt-5">
                     
-                    <h1 style="margin-top: 30px;">Consulta de produtos</h1><hr><br>
+                    <h1>Consulta de produtos</h1><hr><br>
 
                     <form action="controlecad.php" method="get">
                         
