@@ -4,7 +4,7 @@ use mercado;
 
 create table produto(
     codProd int (6) not null unique,
-    descricao varchar (60) not null,
+    descricao varchar (60) not null unique,
     valor decimal (5,2) not null,
     validade date not null
 );

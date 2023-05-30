@@ -11,6 +11,10 @@ create table produto(
     validade date
 );
 
+alter table produto
+modify codProd int (6) not null unique,
+modify descricao varchar (60) not null unique;
+
 desc produto;
 show tables;
 
