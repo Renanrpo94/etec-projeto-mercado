@@ -58,7 +58,7 @@
                         
                         <div class="mb-3">
                             <label for="codProd">Codigo do produto</label>
-                            <input type="number" name="codProd" id="codProd" min="1" max="9999999999" required class="form-control"><br>
+                            <input type="number" name="codProd" id="codProd" min="1" max="999999" required class="form-control"><br>
                         </div>    
 
                         <div class="mb-3">

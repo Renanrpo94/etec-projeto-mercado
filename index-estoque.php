@@ -56,7 +56,7 @@
                 <div class="col mt-5">
                     <form action="controlemovto.php" method="get">
                         <label for="codProd">Codigo do produto</label>
-                        <input type="number" name="codProd" id="codProd" min="1" max="9999999999" class="form-control"><br>
+                        <input type="number" name="codProd" id="codProd" min="1" max="999999" class="form-control" required><br>
 
                         <label for="tipo">Tipo de Movimentação</label>
                         <select name="tipo" id="tipo" class="form-control">

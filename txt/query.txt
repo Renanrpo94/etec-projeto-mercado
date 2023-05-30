@@ -3,7 +3,7 @@ create database mercado;
 use mercado;
 
 create table produto(
-	codProd int (6) not null,
+    codProd int (6) not null unique,
     descricao varchar (60) not null,
     valor decimal (5,2) not null,
     validade date not null
@@ -26,8 +26,8 @@ show tables;
 select * from produto;
 
 create table movto(
-	codProd int (6) not null,
-    tipo varchar (1) not null,
+    codProd int (6) not null,
+    tipo enum ('e','s') not null,
     qtde decimal (7,2) not null,
     datamov timestamp not null default current_timestamp
 );
