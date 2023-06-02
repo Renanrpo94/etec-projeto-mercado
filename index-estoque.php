@@ -60,8 +60,8 @@
 
                         <label for="tipo">Tipo de Movimentação</label>
                         <select name="tipo" id="tipo" class="form-control">
-                            <option value="e" checked>Entrada</option><br>
-                            <option value="s">Saida</option>
+                            <option value="Entrada" checked>Entrada</option><br>
+                            <option value="Saída">Saida</option>
                         </select><br>
                             
                         <label for="qtde">Quantidade</label>

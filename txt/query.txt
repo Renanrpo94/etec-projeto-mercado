@@ -27,10 +27,18 @@ select * from produto;
 
 create table movto(
     codProd int (6) not null,
-    tipo enum ('e','s') not null,
+    tipo varchar(7) not null,
     qtde decimal (7,2) not null,
-    datamov timestamp not null default current_timestamp
+    datamov datetime default current_timestamp
 );
+
+insert into movto values
+(1, 'Entrada', 500, default),
+(1, 'Saída', 100, default),
+(10, 'Entrada', 100, default),
+(10, 'Saída', 350, default),
+(40, 'Entrada', 100, default),
+(40, 'Saída', 23, default);
 
 select * from movto;
 
