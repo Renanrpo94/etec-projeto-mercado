@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Mercado do Zezinho</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
                         <li><a class="dropdown-item" href="index-estoque.php">Cadastrar Movimento de estoque</a></li>
                         <li><hr class="dropdown-divider"></li>
 
-                        <li><a class="dropdown-item" href="">Listar tipo de movimento Entrada / Saida</a></li>
+                        <li><a class="dropdown-item" href="index-listar-mov.php">Listar tipo de movimento Entrada / Saida</a></li>
                 </ul>
           </div>
         </div>

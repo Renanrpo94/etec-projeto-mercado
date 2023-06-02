@@ -63,7 +63,7 @@
                             <label for="ordem"><h4>Consultar movimentos</h4></label><br>
                         </div>
             
-                        <input type="submit" value="Listar" name="listarmovto" id="listarmovto" class="btn btn-success">
+                        <input type="submit" value="Listar" name="listarMovto" id="listarMovto" class="btn btn-success">
                     </form>
                 </div>
             </div>

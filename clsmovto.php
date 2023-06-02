@@ -70,7 +70,8 @@ class movto{
 
         include_once "conexao.php";
 
-        try {
+        try 
+        {
             $comando=$conexao->prepare("delete from movto where codProd = ?");
             $comando->bindParam(1,$this->codProd);
 
@@ -78,12 +79,37 @@ class movto{
             {
                $retorno = "<script>alert('movimento excluido com sucesso');</script><script>location.href='index-estoque.php';</script>";
             }   
-        } catch (PDOException $erro){
+        } 
+        catch (PDOException $erro)
+        {
             $retorno = 'Erro' . $erro->getMessage();
         }
 
         return $retorno;
-
-
     }
+    //--------------------------------------------------------------------------
+
+    //metodo para listar os movimentos
+    public function listarMovto()
+    {
+        
+        include_once "conexao.php";
+
+        try 
+        {
+            $comando=$conexao->prepare("select * from movto order by codProd");
+
+            if ($comando->execute()) 
+            {
+                $retorno = $comando->fetchAll(PDO::FETCH_ASSOC); 
+            }
+        } 
+        catch (PDOException $erro) 
+        {
+            $retorno = 'Erro' . $erro->getMessage();
+        }
+
+        return $retorno;
+    }
+
 }

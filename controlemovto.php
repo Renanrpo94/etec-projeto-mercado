@@ -29,10 +29,16 @@
                         <li><a class="dropdown-item" href="index-cad.php">Cadastrar / Exluir produtos</a></li>
                         <li><hr class="dropdown-divider"></li>
                         
-                        <li><a class="dropdown-item" href="index-listarprod.php">Consultar Estoque</a></li>
+                        <li><a class="dropdown-item" href="index-listarprod.php">Consultar lista de produtos cadastrados</a></li>
                         <li><hr class="dropdown-divider"></li>
                         
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="index-listar-val.php">Consultar data de vencimento</a></li>
+                        <li><hr class="dropdown-divider"></li>
+
+                        <li><a class="dropdown-item" href="index-estoque.php">Cadastrar Movimento de estoque</a></li>
+                        <li><hr class="dropdown-divider"></li>
+
+                        <li><a class="dropdown-item" href="index-listar-mov.php">Listar tipo de movimento Entrada / Saida</a></li>
                 </ul>
           </div>
         </div>
@@ -57,7 +63,7 @@
                         $codProd   = filter_input(INPUT_GET,'codProd',FILTER_VALIDATE_INT);
                         $tipo      = filter_input(INPUT_GET,'tipo');
                         $qtde      = filter_input(INPUT_GET,'qtde',FILTER_SANITIZE_NUMBER_FLOAT);
-                        $datamov  = date('Y-m-d H:i:s');
+                        $datamov   = date('Y-m-d H:i:s');
 
                         //envia os parametros (input-> variavel -> atributo da classe) para os atributos da classe
                         $movimentacao->setcodProd($codProd);
@@ -73,6 +79,41 @@
                         if (isset($_GET["excluir"]))
                         {
                             echo $movimentacao->excluir();
+                        }
+
+                        if (isset($_GET["listarMovto"])) 
+                        {
+                            $Dados = $movimentacao->listarMovto();
+
+                            if (empty($Dados))
+                            {
+                                echo "<script> alert('Movimentos não localizados') </script>";
+                                echo "<script> document.location='index-listar-mov.php' </script>";
+                            }
+                            else
+                            {
+                                print "<h2>Lista de movimentação</h2>";
+                                print "<hr>";
+                                print "<br><br>";
+
+                                print "<table class='table table-hover table striped table-bordered'>";
+                                    print "<tr>";
+                                        print "<th>Código</th>";
+                                        print "<th>Tipo</th>";
+                                        print "<th>Quantidade</th>";
+                                        print "<th>Data</th>";
+                                    print "</tr>";
+                                foreach($Dados as $Dd)
+                                {
+                                    print "<tr>";
+                                        print "<td>{$Dd['codProd']}</td>";
+                                        print "<td>{$Dd['tipo']}</td>";
+                                        print "<td>{$Dd['qtde']}</td>";
+                                        print "<td>". date('d-m-Y', strtotime("{$Dd['datamov']}"))."</td>";
+                                    print "</tr>";
+                                }    
+                                print "</table>";    
+                            }
                         }
 
                     ?>   
