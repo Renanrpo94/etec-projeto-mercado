@@ -47,10 +47,11 @@ class movto{
         include_once "conexao.php";
 
         try {
-            $comando=$conexao->prepare("insert into movto (codProd,tipo,qtde) values (?,?,?)");
+            $comando=$conexao->prepare("insert into movto (codProd,tipo,qtde, datamov) values (?,?,?,?)");
             $comando->bindParam(1,$this->codProd);
             $comando->bindParam(2,$this->tipo);
             $comando->bindParam(3,$this->qtde);
+            $comando->bindParam(4,$this->datamov);
 
             if ($comando->execute())
             {

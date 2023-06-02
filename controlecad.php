@@ -152,7 +152,7 @@
                                     print "<tr>"; 
                                         print "<td>{$Dd['codProd']} </td>";
                                         print "<td>{$Dd['descricao']} </td>";
-                                        print "<td>" . date ('d/m/y', strtotime("{$Dd['validade']}")) . "</td>";           
+                                        print "<td>" . date ('d/m/Y', strtotime("{$Dd['validade']}")) . "</td>";           
                                     print "</tr>"; 
                                 }
                                 print "</table>";  

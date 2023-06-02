@@ -57,7 +57,7 @@
                         $codProd   = filter_input(INPUT_GET,'codProd',FILTER_VALIDATE_INT);
                         $tipo      = filter_input(INPUT_GET,'tipo');
                         $qtde      = filter_input(INPUT_GET,'qtde',FILTER_SANITIZE_NUMBER_FLOAT);
-                        $datamov  = filter_input(INPUT_GET,'datamov');
+                        $datamov  = date('Y-m-d H:i:s');
 
                         //envia os parametros (input-> variavel -> atributo da classe) para os atributos da classe
                         $movimentacao->setcodProd($codProd);
