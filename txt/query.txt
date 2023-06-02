@@ -27,7 +27,7 @@ select * from produto;
 
 create table movto(
     codProd int (6) not null,
-    tipo enum ('e','s') not null,
+    tipo varchar () not null,
     qtde decimal (7,2) not null,
     datamov timestamp not null default current_timestamp
 );
