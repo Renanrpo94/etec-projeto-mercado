@@ -108,8 +108,8 @@
                                     print "<tr>";
                                         print "<td>{$Dd['codProd']}</td>";
                                         print "<td>{$Dd['tipo']}</td>";
-                                        print "<td>{$Dd['qtde']}</td>";
-                                        print "<td>". date('d-m-Y', strtotime("{$Dd['datamov']}"))."</td>";
+                                        print "<td>" . number_format("{$Dd['qtde']}",2,',','.') . "</td>";
+                                        print "<td>". date('d/m/Y h:i:s', strtotime("{$Dd['datamov']}"))."</td>";
                                     print "</tr>";
                                 }    
                                 print "</table>";    
